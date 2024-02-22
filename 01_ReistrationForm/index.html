@@ -6,8 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, harum voluptatibus. Accusamus dolores necessitatibus amet, eos doloremque libero! Voluptatibus rerum quidem distinctio non culpa, exercitationem iste fugit fugiat alias voluptas?
-    </p>
+    <form method="post" action="/register" style="text-align: center;">
+        <div>
+            <lable class="formlable" for="name1">Name</lable>
+            <input type="text" name="name" id="name" class="formcontrol">
+        </div>
+        <div>
+            <label class="formlable" for="email">Email</label>
+            <input type="email" name="email" id="email" class="formcontrol">
+        </div>
+        <div>
+            <label for="passwd" class="formlable">Password</label>
+            <input type="password" name="password" id="passwd" class="formcontrol">
+        </div>
+        <button type="submit">
+            Register
+        </button>
+    </form>
 </body>
 </html>
