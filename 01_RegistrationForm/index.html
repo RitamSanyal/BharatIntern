@@ -23,6 +23,23 @@
             border-radius: 10px;
         }
 
+        @media screen and (max-width:400px){
+            .formbox{
+                width: 335px;
+                height: 300px;
+                padding: 5px;
+            }
+            .button{
+            width: 150px;
+            font-size: medium;
+            margin: 5px;
+            padding: 3px;
+            background: rgb(131, 131, 177);
+            border: 2px solid rgb(131, 131, 177);
+            border-radius: 15px;
+            }
+        }
+
         form div {
             padding: 30px;
             text-align: left;
@@ -78,7 +95,7 @@
                     <label for="passwd" class="formlable">Password:</label>
                     <input type="password" name="password" id="passwd" class="formcontrol">
                 </div>
-                <button type="submit">
+                <button type="submit" class="button">
                     Register
                 </button>
             </form>
