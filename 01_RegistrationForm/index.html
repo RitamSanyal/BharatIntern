@@ -32,12 +32,16 @@
             .button{
             width: 150px;
             font-size: medium;
-            margin: 5px;
+            margin: 35px;
             padding: 3px;
             background: rgb(131, 131, 177);
             border: 2px solid rgb(131, 131, 177);
             border-radius: 15px;
             }
+            .style {
+            padding: 25px;
+            text-align: left;
+        }
         }
 
         form div {
@@ -83,15 +87,15 @@
     <div class="form">
         <div class="formbox">
             <form method="post" action="/register" style="text-align: center;">
-                <div class="name">
+                <div class="name style">
                     <lable class="formlable" for="name1">Name:</lable>
                     <input type="text" name="name" id="name" class="formcontrol">
                 </div>
-                <div class="email">
+                <div class="email style">
                     <label class="formlable" for="email">Email:</label>
                     <input type="email" name="email" id="email" class="formcontrol">
                 </div>
-                <div class="password">
+                <div class="password style">
                     <label for="passwd" class="formlable">Password:</label>
                     <input type="password" name="password" id="passwd" class="formcontrol">
                 </div>
