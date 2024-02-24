@@ -5,17 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <style>
-        *{
+        body{
             background-image: url(illustration-graphic-of-aesthetic-background-template-with-minimalist-pastel-colors-and-nature-inspired-accents-simple-and-minimalist-background-template-vector.jpg);
             background-size: cover;
             background-repeat: no-repeat;
-            margin:0px;
-            padding:0px;
-        }
-        body{
-/*             background-image: url(illustration-graphic-of-aesthetic-background-template-with-minimalist-pastel-colors-and-nature-inspired-accents-simple-and-minimalist-background-template-vector.jpg);
-            background-size: cover;
-            background-repeat: no-repeat; */
             text-align:center;
             position: relative;
             top: 150px;
@@ -63,24 +56,26 @@
     </style>
 </head>
 <body>
-    <div class="formbox">
-        <form method="post" action="/register" style="text-align: center;">
-            <div class="name">
-                <lable class="formlable" for="name1">Name:</lable>
-                <input type="text" name="name" id="name" class="formcontrol">
-            </div>
-            <div class="email">
-                <label class="formlable" for="email">Email:</label>
-                <input type="email" name="email" id="email" class="formcontrol">
-            </div>
-            <div class="password">
-                <label for="passwd" class="formlable">Password:</label>
-                <input type="password" name="password" id="passwd" class="formcontrol">
-            </div>
-            <button type="submit">
-                Register
-            </button>
-        </form>
+    <div class="form">
+        <div class="formbox">
+            <form method="post" action="/register" style="text-align: center;">
+                <div class="name">
+                    <lable class="formlable" for="name1">Name:</lable>
+                    <input type="text" name="name" id="name" class="formcontrol">
+                </div>
+                <div class="email">
+                    <label class="formlable" for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="formcontrol">
+                </div>
+                <div class="password">
+                    <label for="passwd" class="formlable">Password:</label>
+                    <input type="password" name="password" id="passwd" class="formcontrol">
+                </div>
+                <button type="submit">
+                    Register
+                </button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
