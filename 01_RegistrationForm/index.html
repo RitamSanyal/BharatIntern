@@ -83,7 +83,32 @@
             border-radius: 15px;
         }
 
-        form button:hover{
+        input:invalid{
+            border-style: solid;
+            border-color: rgb(216, 140, 140);
+        }
+
+        input:valid{
+            border-style: solid;
+            border-color: rgb(134, 136, 204)
+        }
+
+        form:invalid .button {
+            border-color: #c8cfc8;
+            background-color: #c8cfc8;
+            color: #7e829b;
+            cursor: not-allowed;
+        }
+
+        form:valid .button {
+            background: rgb(131, 131, 177);
+            border: 2px solid rgb(131, 131, 177);
+            cursor: pointer;
+            opacity: 1;
+        }
+
+
+        form:valid button:hover {
             background: rgb(73, 73, 226);
             border: 2px solid rgb(73, 73, 226);
         }
@@ -96,15 +121,15 @@
             <form method="post" action="/register" style="text-align: center;">
                 <div class="name style">
                     <lable class="formlable" for="name1">Name:</lable>
-                    <input type="text" name="name" id="name" class="formcontrol">
+                    <input type="text" name="name" id="name" class="formcontrol" required>
                 </div>
                 <div class="email style">
                     <label class="formlable" for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="formcontrol">
+                    <input type="email" name="email" id="email" class="formcontrol" required>
                 </div>
                 <div class="password style">
                     <label for="passwd" class="formlable">Password:</label>
-                    <input type="password" name="password" id="passwd" class="formcontrol">
+                    <input type="password" name="password" id="passwd" class="formcontrol" required>
                 </div>
                 <button type="submit" class="button">
                     Register
