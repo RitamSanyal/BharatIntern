@@ -9,10 +9,16 @@ app.use('/articles', articleRouter)
 app.get('/', (req, res) => {
     const articles = [{
         title: 'Test Article',
-        createdAt: Date.now(),
+        createdAt: new Date(),
         description: 'Test description'
-    }]
-    res.render('index', { articles: articles })
+    },
+    {
+        title: 'Test Article2', 
+        createdAt: new Date(),
+        description: 'Test description 2'
+    }
+    ]
+    res.render('articles/index', { articles: articles })
 })
 
 app.listen(5000)
