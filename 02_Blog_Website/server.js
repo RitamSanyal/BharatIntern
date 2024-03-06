@@ -6,6 +6,8 @@ const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
+app.use(express.static('public'));
+dotenv.config();
 
 dotenv.config();
 
