@@ -8,19 +8,34 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Blog</title>
     <style>
-        body{
+        body {
             background-image: url(/1327995.png);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            background-color: rgba(117, 122, 194, 0.432);
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1 style="color: aliceblue;" class="mt-2 mb-4">New Article</h1>
+    <main>
         <form action="/articles" method="post">
-            <%- include('_form_fields') %>
+            <div class="container">
+                <h1 style="color: aliceblue;" class="mt-2 mb-4">New Article</h1>
+                <%- include('_form_fields') %>
         </form>
-    </div>
+        </div>
+    </main>
+    <footer>
+        2024&copy; All rights of this website is reserved to sole owner Ritam Sanyal
+    </footer>
 </body>
 
 </html>

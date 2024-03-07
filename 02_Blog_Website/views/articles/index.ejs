@@ -12,34 +12,49 @@
             background-image: url(1327995.png);
             background-attachment: fixed;
             background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            background-color: rgba(117, 122, 194, 0.432);
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1 style="color: rgb(248, 250, 252); text-align: center;" class="mt-2 mb-3">Blog Articles</h1>
-        <a href="/articles/new" class="btn btn-success">New Articles +</a>
-
-        <% articles.forEach(article=> { %>
-            <div style="background-color: rgb(126, 158, 245);" class="card mt-4">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <%= article.title %>
-                    </h4>
+    <main>
+        <div class="container">
+            <h1 style="color: rgb(248, 250, 252); text-align: center;" class="mt-2 mb-3">Blog Articles</h1>
+            <a href="/articles/new" class="btn btn-success">New Articles +</a>
+            
+            <% articles.forEach(article=> { %>
+                <div style="background-color: rgba(70, 114, 235, 0.637);" class="card mt-4">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <%= article.title %>
+                        </h4>
                     <div class="card-subtitle text-muted mb-2">
                         <%= article.createdAt.toLocaleDateString() %>
                     </div>
                     <div class="card-text mb-2"><%= article.description %></div>
                     <a href="articles/<%= article.slug %>" class="btn btn-primary"> Read More </a>
                     <a href="articles/edit/<%= article.id %>" class="btn btn-info"> Edit </a>
-                    <form action="/articles/<%= article.id %>?_method=DELETE" method="post" class="d-inline">
+                    <!-- <form action="/articles/<%= article.id %>?_method=DELETE" method="post" class="d-inline">
                         <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    </form> -->
                 </div>
             </div>
             <%})%>
-    </div>
+        </div>
+    </main>
+    <footer>
+        2024&copy; All rights of this website is reserved to sole owner Ritam Sanyal
+    </footer>
 </body>
 
 </html>

@@ -12,24 +12,40 @@
             background-image: url(/1327995.png);
             background-attachment: fixed;
             background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            background-color: rgba(117, 122, 194, 0.432);
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1 style="color: rgb(13, 0, 197); text-align: center;" class="mb-1">
-            <%= article.title %>
-        </h1>
-        <div style="text-align: center;" class="text-muted mb-2">
-            <%= article.createdAt.toLocaleDateString() %>
+    <main>
+
+        <div class="container">
+            <h1 style="color: aliceblue; text-align: center;" class="mb-1">
+                <%= article.title %>
+            </h1>
+            <div style="text-align: center;" class="text-muted mb-2">
+                <%= article.createdAt.toLocaleDateString() %>
+            </div>
+            <a href="/" class="btn btn-secondary">All Articles</a>
+            <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+            <div style="background-color: rgba(70, 114, 235, 0.637);" class="card mt-2 mb-2 p-2">
+                <%- article.sanitizedHtml %>
+            </div>
         </div>
-        <a href="/" class="btn btn-secondary">All Articles</a>
-        <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
-        <div style="background-color: rgb(119, 138, 250);" class="card mt-2 mb-2 p-2">
-            <%- article.sanitizedHtml %>
-        </div>
-    </div>
+    </main>
+    <footer>
+        2024&copy; All rights of this website is reserved to sole owner Ritam Sanyal
+    </footer>
 </body>
 
 </html>
